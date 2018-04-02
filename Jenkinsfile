@@ -5,17 +5,17 @@ pipeline {
             args '-p 3000:3000 -p 5000:5000' 
         }
     }
-    agent {
-        docker {
-            image 'node:latest' 
-            args '-p 3000:3000 -p 5000:5000' 
-        }
-    }
     environment {
         CI = 'true'
     }
     stages {
-        stage('Build') { 
+        stage('Build') {
+            agent {
+                docker {
+                    image 'node:latest' 
+                    args '-p 3000:3000 -p 5000:5000' 
+                }
+            }
             steps {
                 sh 'npm install' 
             }
