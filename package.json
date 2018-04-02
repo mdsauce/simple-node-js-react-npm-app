@@ -15,7 +15,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "e2etest":"./node_modules/.bin/wdio wdio.conf.js"
+    "e2etest":"./node_modules/.bin/wdio wdio.conf.js",
     "eject": "react-scripts eject"
   }
 }
