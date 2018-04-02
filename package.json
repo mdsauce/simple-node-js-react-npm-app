@@ -3,14 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "npm": "^5.8.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "react-scripts": "1.0.14"
+    "react-scripts": "1.0.14",
+    "wdio-mocha-framework": "^0.5.13",
+    "wdio-spec-reporter": "^0.1.4",
+    "webdriverio": "^4.12.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "e2etest":"./node_modules/.bin/wdio wdio.conf.js"
     "eject": "react-scripts eject"
   }
 }
