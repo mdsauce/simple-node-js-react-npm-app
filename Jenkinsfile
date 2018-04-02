@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'node:9.10.1'
+            image 'node:latest'
             args '-p 3000:3000 -p 5000:5000' 
         }
     }
@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                // sh './jenkins/scripts/test.sh'
+                sh './jenkins/scripts/test.sh'
             }
         }
         stage('Deliver for development') {
