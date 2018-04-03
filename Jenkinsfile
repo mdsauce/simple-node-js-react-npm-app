@@ -17,7 +17,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh './jenkins/scripts/test.sh'
-                sh './jenkins/scripts/e2e-tests.sh'
+                //sh './jenkins/scripts/e2e-tests.sh'
             }
         }
         stage('Deliver for development') {
