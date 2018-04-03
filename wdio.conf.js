@@ -1,6 +1,11 @@
 let mochaTimeout = 100000;
 
 var config = {
+    // WebdriverIO will automatically configure the host based on the value of the user and key
+    // See WebdriverIO's cloudservice.md document for more info.
+    user: process.env.SAUCE_USERNAME,
+    key: process.env.SAUCE_ACCESS_KEY,
+    
     /* Optional maxInstances value limits the number of child processes spawned.
     * Each capability defined gets a child process so that tests automatically run in parallel
     * Refer to for more info https://github.com/webdriverio/webdriverio/issues/205#issuecomment-183345085
@@ -11,9 +16,6 @@ var config = {
         {browserName: 'chrome', platform: 'OS X 10.10', version: '45.0'},
         {browserName: 'internet explorer', platform: 'Windows 7', version: '10'}
     ],
-
-    user: process.env.SAUCE_USERNAME,
-    key: process.env.SAUCE_ACCESS_KEY,
 
     specs: [
         './tests/specs/**/*.js'
