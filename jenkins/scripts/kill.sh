@@ -5,6 +5,6 @@ echo '(written to ".pidfile"), all of which were conducted when "deliver.sh"'
 echo 'was executed.'
 set -x
 echo 'current node process' 
-ps -ax | grep node
+ps -ax | grep npm
 cat .pidfile
 kill $(cat .pidfile)

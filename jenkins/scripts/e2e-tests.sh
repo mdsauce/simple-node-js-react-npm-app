@@ -5,9 +5,8 @@ set -x
 npm start &
 sleep 1
 echo $! > .testpidfile
-set +x
 
 npm run e2etest
 
-set -x
 kill $(cat .testpidfile)
+set +x
