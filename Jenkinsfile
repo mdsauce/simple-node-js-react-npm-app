@@ -18,6 +18,7 @@ pipeline {
             steps {
                 sh 'echo $PWD'
                 sh './jenkins/scripts/test.sh'
+                sh 'cd $HOME'
                 sh 'echo $PWD'
                 sh './jenkins/scripts/e2e-tests.sh'
             }
