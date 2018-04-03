@@ -9,4 +9,3 @@ echo $! > .testpidfile
 npm run e2etest
 
 kill $(cat .testpidfile)
-set +x
