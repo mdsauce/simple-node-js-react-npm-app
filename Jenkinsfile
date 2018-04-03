@@ -1,5 +1,4 @@
 pipeline {
-    checkout scm
     agent {
         docker {
             image 'node:latest'
@@ -18,7 +17,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh './jenkins/scripts/test.sh'
-                sh './jenkins/scripts/e2e-tests.sh'
+                sh './e2e-tests.sh'
             }
         }
         stage('Deliver for development') {
