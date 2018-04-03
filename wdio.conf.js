@@ -14,7 +14,7 @@ var config = {
     capabilities: [
         {browserName: 'firefox', platform: 'Windows 10', version: '41.0', tunnelIdentifier: 'fakebusiness'},
         {browserName: 'chrome', platform: 'OS X 10.10', version: '45.0', tunnelIdentifier: 'fakebusiness'},
-        {browserName: 'internet explorer', platform: 'Windows 7', version: '10', tunnelIdentifier: 'fakebusiness'}
+        {browserName: 'chrome', platform: 'Windows 8.1', version: '55', tunnelIdentifier: 'fakebusiness'}
     ],
 
     specs: [
