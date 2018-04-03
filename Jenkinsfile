@@ -17,6 +17,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh './jenkins/scripts/test.sh'
+                sh 'pwd'
                 sh './jenkins/scripts/e2e-tests.sh'
             }
         }
